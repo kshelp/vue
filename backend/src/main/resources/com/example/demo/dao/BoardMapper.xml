@@ -27,13 +27,8 @@
 	</sql>
 
 	<insert id="insertBoard" parameterType="boardDto">
-		INSERT INTO board VALUES
-		(0,
-		<include refid="title" />
-		,
-		<include refid="content" />
-		,
-		#{writer}, #{password}, SYSDATE())
+		INSERT INTO board (title, content, writer, password, writeDate) VALUES
+		(#{title}, #{content}, #{writer}, #{password}, SYSDATE())
 	</insert>
 
 	<update id="updateBoard" parameterType="boardDto">
