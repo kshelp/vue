@@ -17,6 +17,8 @@ public class DataSourceTests {
     @Test
     public void run() throws Exception {
 
+    	System.out.println("/*** DBCP: " + dataSource.getClass());
+    	
         Connection connection = dataSource.getConnection();
         
         System.out.println("/*** Url: " + connection.getMetaData().getURL());
