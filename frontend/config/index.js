@@ -4,14 +4,17 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
+
+    // lab begin
     //index: path.resolve(__dirname, '../dist/index.html'),
-    index: path.resolve(__dirname, '../../backend/src/main/resources/templates/index.html'),
     //assetsRoot: path.resolve(__dirname, '../dist'),
     //assetsSubDirectory: 'static',
     //assetsPublicPath: '/',
-    assetsRoot: path.resolve(__dirname, '../../backend/src/main/resources/static'),
+    index: path.resolve(__dirname, '../../backendLab/src/main/resources/templates/index.html'),
+    assetsRoot: path.resolve(__dirname, '../../backendLab/src/main/resources/static'),
     assetsSubDirectory: '',
     assetsPublicPath: '/static',
+	// lab end
     
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
@@ -28,7 +31,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8081,
+    port: 80,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
